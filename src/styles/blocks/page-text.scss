@@ -1,0 +1,97 @@
+.text {
+   background-color: $bg-block;
+   padding-top: 33px;
+   padding-bottom: 36px;
+   h2 {
+      font-family: 'Exo', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      left: 30px;
+      color: $title;
+      margin-bottom: 21px;
+   }
+
+   p {
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+      color: $title;
+      margin-bottom: 22px;
+   }
+
+   h3 {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: $title;
+      margin-bottom: 32px;
+   }
+
+   ul {
+      li {
+         font-size: 16px;
+         line-height: 26px;
+         font-weight: 400;
+         color: $title;
+
+         margin-bottom: 22px;
+         padding-left: 23px;
+         position: relative;
+         &:last-child {
+            margin-bottom: 0;
+         }
+
+         &::before {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 10px;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+
+            background: url(../../images/icon/Ok.svg);
+         }
+      }
+   }
+
+   &__invisible {
+      margin-bottom: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: all 0.3s ease-in-out;
+      &--active {
+         margin-bottom: 32px;
+      }
+   }
+
+   &__link {
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $primary;
+      position: relative;
+      &::after {
+         content: '';
+         position: absolute;
+         bottom: 10px;
+         opacity: 0;
+         right: -14px;
+
+         width: 9px;
+         height: 19px;
+
+         background: url(../../images/icon/Next.svg);
+         transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+         &::after {
+            bottom: 0;
+            opacity: 1;
+         }
+      }
+   }
+}

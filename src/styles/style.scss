@@ -7,9 +7,14 @@ body.lock {
    overflow: hidden;
 }
 
+.test {
+   height: 500px;
+}
+
 .title {
    color: $title;
    font-size: 24px;
+   font-weight: 700;
    line-height: 30px;
    margin-bottom: 20px;
 
@@ -22,12 +27,11 @@ body.lock {
    @media screen and (min-width: 1366px) {
       font-size: 30px;
       line-height: 40px;
-      margin-bottom: 39px;
+      margin-bottom: 32px;
 
       &--main {
-         font-size: 30px;
-         line-height: 40px;
-         margin-bottom: 39px;
+         font-size: 40px;
+         line-height: 50px;
       }
    }
 }
