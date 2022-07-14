@@ -156,11 +156,6 @@
       appearance: none;
       position: absolute;
    }
-
-   // &__checkbox:checked ~ .choice::before {
-   //    border: 2px solid $primary;
-   //    background: url(../../images/icon/Чек.svg) center no-repeat;
-   // }
 }
 
 
@@ -257,5 +252,9 @@
 
       flex: 1 1 auto;
       width: 0;
+   }
+
+   .noUi-horizontal .noUi-handle-upper {
+      right: 0;
    }
 }
