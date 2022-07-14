@@ -12,7 +12,8 @@
 
     <!-- Main -->
     <main class="page__product-catalog product-catalog">
-      <!--Section--><!--/ Section-->
+      <!--Section-->
+      <!-- Section Filters -->
       <section class="product-catalog__filters filters">
         <div class="container">
           <div class="filters__title title title--main">Микроконтроллеры</div>
@@ -135,10 +136,88 @@
               </div>
             </li>
           </ul>
+          <button class="btn-filter-reset">
+            <svg class="icon">
+              <use xlink:href="svg-sprite/svg-sprite.svg#Reset"></use>
+            </svg>
+            Сбросить фильтры
+          </button>
         </div>
       </section>
+      <!-- /Section Filters -->
+
+      <!--Section Search-->
+      <section class="product-catalog__search search-catalog">
+        <div class="container">
+          <div class="search-catalog__wrapper">
+            <div class="search-catalog__field">
+              <input type="search" name="search-catalog" id="search-catalog" class="search-catalog__input" placeholder="Поиск по товарам">
+              <button class="search-catalog__btn">
+                <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#Search"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="filters__list drop-down">
+              <li class="drop-down__item">
+                <div class="drop-down__header">
+                  <span>Сортировать по:</span>
+                  <span class="drop-down__choice">
+                    Цене
+                    <svg class="drop-down__icon">
+                      <use xlink:href="svg-sprite/svg-sprite.svg#increase"></use>
+                    </svg>
+                  </span>
+                  <svg class="icon">
+                    <use xlink:href="svg-sprite/svg-sprite.svg#arrow-open"></use>
+                  </svg>
+                </div>
+                <ul class="drop-down__list">
+                  <li class="drop-down__subitem">
+                    <span>Цене</span>
+                    <svg class="icon">
+                      <use xlink:href="svg-sprite/svg-sprite.svg#increase"></use>
+                    </svg>
+                  </li>
+                  <li class="drop-down__subitem drop-down__subitem--reverse">
+                    <span>Цене</span>
+                    <svg class="icon">
+                      <use xlink:href="svg-sprite/svg-sprite.svg#increase"></use>
+                    </svg>
+                  </li>
+                  <li class="drop-down__subitem drop-down__subitem--reverse">
+                    <span>Цене</span>
+                    <span class="color">от А до Я</span>
+                  </li>
+                  <li class="drop-down__subitem drop-down__subitem--reverse">
+                    <span>Цене</span>
+                    <span class="color">от Я до А</span>
+                  </li>
+                </ul>
+              </li>
+              <li class="drop-down__item">
+                <div class="drop-down__header">
+                  <span>Показать по:</span>
+                  <span class="search-count">25</span>
+                  <svg class="icon">
+                    <use xlink:href="svg-sprite/svg-sprite.svg#arrow-open"></use>
+                  </svg>
+                </div>
+                <ul class="drop-down__list">
+                  <li class="drop-down__subitem">25</li>
+                  <li class="drop-down__subitem">50</li>
+                  <li class="drop-down__subitem">100</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!--/ Section Search-->
+
 
       <section class="test"></section>
+      <!--/ Section-->
       <!--Popup--><!--/ Popup-->
     </main>
     <!-- / Main -->
