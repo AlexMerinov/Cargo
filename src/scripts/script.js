@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // RangeSlider -------------------------------------->
 
-   const rangeSlider = document.getElementById('range-slider');
+   const rangeSlider = document.getElementById('.range-slider');
 
    if (rangeSlider) {
 
@@ -72,11 +72,35 @@ document.addEventListener("DOMContentLoaded", () => {
       inputs.forEach((el, index) => {
          el.addEventListener('change', (e) => {
             setRangeSlider(index, e.currentTarget.value)
-         })
-      })
+         });
+      });
    }
 
-   
+   // anchors choise item in header list
+
+   const choiceAnchors = document.querySelectorAll('.choice__input');
+
+   for (let i = 0, len = choiceAnchors.length; i < len; i++) {
+      let thisAnchor = choiceAnchors[i];
+      let nameTitle = document.querySelector('.drop-down__name').textContent;
+      thisAnchor.onclick = newTitle;
+      let checkedArray = [];
+
+      function newTitle() {
+         if (thisAnchor.checked) {
+            let activeAnchor = this.closest('.choice').querySelector('.choice__name').textContent;
+            let dropDownName = this.closest('.drop-down__item').querySelector('.drop-down__name');
+            checkedArray.push(activeAnchor);
+            dropDownName.innerHTML = checkedArray;
+            console.log(checkedArray);
+         } else {
+            let activeAnchor = this.closest('.choice').querySelector('.choice__name').textContent;
+            let dropDownName = this.closest('.drop-down__item').querySelector('.drop-down__name');
+            checkedArray.splice(activeAnchor);
+            dropDownName.innerHTML = nameTitle;
+         };
+      };
+   }
 
 });
 

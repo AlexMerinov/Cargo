@@ -1,0 +1,117 @@
+.product-card-row {
+   display: flex;
+   &__col-preview {
+      display: flex;
+      padding: 20px;
+   }
+   &__preview {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__desc {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__art {
+      display: block;
+      margin-bottom: 13px;
+
+      font-size: 12px;
+      line-height: 14px;
+      color: #6c6c7e;
+   }
+
+   &__title {
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 700;
+      color: $title;
+      margin-bottom: 13px;
+   }
+
+   &__property {
+      span {
+         font-size: 13px;
+         line-height: 15px;
+         &:nth-child(1) {
+            color: #6c6c7e;
+            margin-right: 5px;
+         }
+         &:nth-child(2) {
+            color: $title;
+         }
+      }
+   }
+
+   &__col-delivery {
+      padding: 20px;
+      background-color: $bg-block;
+   }
+
+   &__col-price {
+      padding: 20px;
+
+      li {
+         display: flex;
+         align-items: center;
+         span {
+            &:nth-child(1) {
+               font-size: 16px;
+               line-height: 20px;
+               color: $title;
+               margin-right: 10px;
+            }
+            &:nth-child(2) {
+               font-size: 14px;
+               line-height: 17px;
+               color: #6c6c7e;
+            }
+         }
+      }
+   }
+
+   &__col-cart {
+      padding: 20px;
+   }
+   &__value {
+      padding: 17px;
+      border: 1px solid #F3F3F9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 10px;
+
+      font-size: 16px;
+      line-height: 20px;
+      color: $title;
+   }
+
+   &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 13px 22px;
+      width: 100%;
+
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFF;
+      background-color: $primary;
+      .icon {
+         width: 24px;
+         height: 24px;
+         fill: #FFF;
+         margin-right: 10px;
+      }
+   }
+
+}
