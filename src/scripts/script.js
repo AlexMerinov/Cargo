@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // RangeSlider -------------------------------------->
 
-   const rangeSlider = document.getElementById('.range-slider');
+   const rangeSlider = document.getElementById('range-slider');
 
    if (rangeSlider) {
 
@@ -102,5 +102,74 @@ document.addEventListener("DOMContentLoaded", () => {
       };
    }
 
+   /*custom input number-------------------------------->*/
+   const quantityValue = document.querySelector('.input-value');
+   const valueBtnsMunus = document.querySelector('.btn-value--prev');
+   const valueBtnsPlus = document.querySelector('.btn-value--next');
+
+   if (quantityValue) {
+      valueBtnsMunus.addEventListener('click', function () {
+         if (quantityValue.value > 0) {
+            quantityValue.value = quantityValue.value - 1;
+         }
+      });
+      valueBtnsPlus.addEventListener('click', function () {
+         quantityValue.value = +quantityValue.value + 1;
+      });
+   }
+
+
+   /*-----------------Main slider Banner-------------------------------*/
+
+   const mainSlider = new Swiper('.main-slider', { 
+      // If we need pagination
+      pagination: {
+         el: '.main-slider__pagination',
+         clickable: true,
+      },
+
+      autoplay: {
+         delay: 3000,
+      },
+
+      speed: 1000,
+      effect: 'fade',
+   
+   });
+
+   /*-----------------Slider brands-------------------------------*/
+
+   const brandSlider = new Swiper('.brands-carusel', { 
+
+      slidesPerView: 1.5,
+
+      breakpoints: {
+         1366: {
+            slidesPerView: 5,
+         },
+         768: {
+            slidesPerView: 3,
+         },
+      }
+
+   });
+
+      /*-----------------Slider brands-------------------------------*/
+
+      const categoriesSlider = new Swiper('.categories-slider', { 
+
+         slidesPerView: 1.5,
+         spaceBetween: 20,
+   
+         breakpoints: {
+            1366: {
+               slidesPerView: 4,
+            },
+            768: {
+               slidesPerView: 3,
+            },
+         }
+   
+      });
 });
 

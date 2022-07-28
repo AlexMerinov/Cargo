@@ -5,7 +5,8 @@
   <div class="page__box">
     <!-- Header -->
     <header class="page__header header">
-      <div class="header-top"></div>
+      <div class="header-top">
+      </div>
       <div class="header-bottom"></div>
     </header>
     <!-- / Header -->
@@ -218,123 +219,185 @@
       <!--Section Grid-items-->
       <section class="grid-product">
         <div class="container">
+          <div class="grid-product__choice count-choice">
+            <label class="product-card-row__choice choice">
+              <span class="choice__name"></span>
+              <input class="choice__input" type="checkbox" />
+              <span class="choice__checkbox"></span>
+            </label>
+            <div class="count-choice__amount">
+              <span>Выбранно:</span>
+              <span class="count-choice__num">20 товаров</span>
+            </div>
+            <button class="count-choice__btn" type="button">
+              <svg class="icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+              </svg>
+              <span>Купить выбранные</span>
+            </button>
+            <button class="count-choice__btn" type="button">
+              <svg class="icon">
+                <use xlink:href="svg-sprite/svg-sprite.svg#compare"></use>
+              </svg>
+              <span>Купить выбранные</span>
+            </button>
+          </div>
           <div class="grid-product__wrapper">
             <div class="grid-product__header"></div>
             <div class="grid-product__row">
-              <div class="grid-product__item product-card-row row">
-                <div class="product-card-row__col-preview col cols-lg-6">
-                  <picture class="product-card-row__preview">
-                    <img src="images/card-image/card-row.png" alt="no-image">
-                  </picture>
-                  <div class="product-card-row__desc">
-                    <span class="product-card-row__art">Арт. УТ000036917</span>
-                    <h2 class="product-card-row__title">RASPBERRY-PI / PROG-4GB-SDCARD, Карта памяти SD 4Gb с предустановленным Debian 6 Linux 2 Gb</h2>
-                    <div class="product-card-row__property">
-                      <span>Бренд:</span>
-                      <span>Samsung</span>
-                    </div>
-                    <div class="product-card-row__property">
-                      <span>Производитель:</span>
-                      <span>Samsung</span>
-                    </div>
-                    <div class="product-card-row__property">
-                      <span>Основная группа:</span>
-                      <span>Компьютерные аксессуары и принадлежности, компьютерные аксессуары и принадлежности</span>
-                    </div>
+              <div class="grid-product__item product-card-row">
+               <div class="row">
+                  <div class="col cols-lg-6">
+                  <div class="product-card-row__col-preview">
+                     <label class="product-card-row__choice choice">
+                        <span class="choice__name"></span>
+                        <input class="choice__input" type="checkbox" />
+                        <span class="choice__checkbox"></span>
+                     </label>
+                     <picture class="product-card-row__preview">
+                        <img src="images/card-image/card-row.png" alt="no-image">
+                     </picture>
+                     <div class="product-card-row__desc">
+                        <ul class="product-card-row__promo-label promo-label-list">
+                           <li class="promo-label-list__item">
+                              <a href="#" class="promo-label-list__link promo-label-list__link--sale">Скидка 20%</a>
+                           </li>
+                           <li class="promo-label-list__item">
+                              <a href="#" class="promo-label-list__link promo-label-list__link--promo">Акция</a>
+                           </li>
+                           <li class="promo-label-list__item">
+                              <a href="#" class="promo-label-list__link promo-label-list__link--hit">Хит</a>
+                           </li>
+                        </ul>
+                        <span class="product-card-row__art">Арт. УТ000036917</span>
+                        <h2 class="product-card-row__title">RASPBERRY-PI / PROG-4GB-SDCARD, Карта памяти SD 4Gb с предустановленным Debian 6 Linux 2 Gb</h2>
+                        <div class="product-card-row__property">
+                           <span>Бренд:</span>
+                           <span>Samsung</span>
+                        </div>
+                        <div class="product-card-row__property">
+                           <span>Производитель:</span>
+                           <span>Samsung</span>
+                        </div>
+                        <div class="product-card-row__property">
+                           <span>Основная группа:</span>
+                           <span>Компьютерные аксессуары и принадлежности, компьютерные аксессуары и принадлежности</span>
+                        </div>
+                     </div>
                   </div>
-                </div>
-                <div class="product-card-row__col-delivery col cols-lg-2">
-                  <ul class="product-card-row__delivery-list">
-                    <li>
-                      <label class="choice">
-                        В наличии
-                        <input class="choice__input" type="checkbox" />
-                        <span
-                          class="choice__checkbox choice__checkbox--round"
-                        ></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="choice">
-                        Доставка: 1-2 дня
-                        <input class="choice__input" type="checkbox" />
-                        <span
-                          class="choice__checkbox choice__checkbox--round"
-                        ></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="choice">
-                        Доставка: 3-5 дней
-                        <input class="choice__input" type="checkbox" />
-                        <span
-                          class="choice__checkbox choice__checkbox--round"
-                        ></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="choice">
-                        Доставка: 7-10 дней
-                        <input class="choice__input" type="checkbox" />
-                        <span
-                          class="choice__checkbox choice__checkbox--round"
-                        ></span>
-                      </label>
-                    </li>
-                    <li>
-                      <label class="choice">
-                        Доставка: 2 недели
-                        <input class="choice__input" type="checkbox" />
-                        <span
-                          class="choice__checkbox choice__checkbox--round"
-                        ></span>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-                <div class="product-card-row__col-price col cols-lg-2">
-                  <ul class="product-card-row__price-list">
-                    <li>
-                      <span>1 813,39 ₽</span>
-                      <span>от 1 шт.</span>
-                    </li>
-                    <li>
-                      <span>1 780,00 ₽</span>
-                      <span>от 8 шт.</span>
-                    </li>
-                    <li>
-                      <span>1 750,00 ₽</span>
-                      <span>от 14 шт.</span>
-                    </li>
-                    <li>
-                      <span>1 720,00 ₽</span>
-                      <span>от 20 шт.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="product-card-row__col-cart col cols-lg-2">
-                  <input class="product-card-row__value" type="number">
-                  <button type="button" class="product-card-row__btn">
-                    <svg class="icon">
-                      <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
-                    </svg>
-                    <span>Добавить в корзину</span>
-                  </button>
-                  <div class="product-card-row__activities card-row-activities">
-                    <label class="card-row-activities__favorite">
-                      <input type="checkbox" class="card-row-activities__check">
-                      <svg class="icon">
-                        <use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
-                      </svg>
-                    </label>
-                    <label class="card-row-activities__favorite">
-                      <input type="checkbox" class="card-row-activities__compare">
-                      <svg class="icon">
-                        <use xlink:href="svg-sprite/svg-sprite.svg#compare"></use>
-                      </svg>
-                    </label>
+
                   </div>
-                </div>
+                  <div class="col cols-lg-2">
+                     <div class="product-card-row__col-delivery">
+                        <ul class="product-card-row__delivery-list">
+                           <li>
+                              <label class="choice">
+                              В наличии
+                              <input class="choice__input" type="checkbox" />
+                              <span
+                                 class="choice__checkbox choice__checkbox--round"
+                              ></span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="choice">
+                              Доставка: 1-2 дня
+                              <input class="choice__input" type="checkbox" />
+                              <span
+                                 class="choice__checkbox choice__checkbox--round"
+                              ></span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="choice">
+                              Доставка: 3-5 дней
+                              <input class="choice__input" type="checkbox" />
+                              <span
+                                 class="choice__checkbox choice__checkbox--round"
+                              ></span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="choice">
+                              Доставка: 7-10 дней
+                              <input class="choice__input" type="checkbox" />
+                              <span
+                                 class="choice__checkbox choice__checkbox--round"
+                              ></span>
+                              </label>
+                           </li>
+                           <li>
+                              <label class="choice">
+                              Доставка: 2 недели
+                              <input class="choice__input" type="checkbox" />
+                              <span
+                                 class="choice__checkbox choice__checkbox--round"
+                              ></span>
+                              </label>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col cols-lg-2">
+                     <div class="product-card-row__col-price">
+                        <ul class="product-card-row__price-list">
+                           <li>
+                              <span>1 813,39 ₽</span>
+                              <span>от 1 шт.</span>
+                           </li>
+                           <li>
+                              <span>1 780,00 ₽</span>
+                              <span>от 8 шт.</span>
+                           </li>
+                           <li>
+                              <span>1 750,00 ₽</span>
+                              <span>от 14 шт.</span>
+                           </li>
+                           <li>
+                              <span>1 720,00 ₽</span>
+                              <span>от 20 шт.</span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col cols-lg-2">
+                     <div class="product-card-row__col-cart">
+                        <form class="product-card-row__value">
+                           <button type="button" class="btn-value btn-value--prev">
+                              <svg class="icon">
+                                 <use xlink:href="svg-sprite/svg-sprite.svg#Reset"></use>
+                              </svg>
+                           </button>
+                           <input class="input-value" value="3" type="number">
+                           <button type="button" class="btn-value btn-value--next">
+                            <svg class="icon">
+                                <use xlink:href="svg-sprite/svg-sprite.svg#Reset"></use>
+                            </svg>
+                           </button>
+                        </form>
+                        <button type="button" class="product-card-row__btn">
+                           <svg class="icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                           </svg>
+                           <span>Добавить в корзину</span>
+                        </button>
+                        <div class="product-card-row__activities card-row-activities">
+                           <label class="card-row-activities__favorite">
+                              <input type="checkbox" class="card-row-activities__check">
+                              <svg class="icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#favorites"></use>
+                              </svg>
+                           </label>
+                           <label class="card-row-activities__favorite">
+                              <input type="checkbox" class="card-row-activities__check">
+                              <svg class="icon">
+                              <use xlink:href="svg-sprite/svg-sprite.svg#compare"></use>
+                              </svg>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
               </div>
             </div>
           </div>

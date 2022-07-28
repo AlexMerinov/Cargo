@@ -1,0 +1,11 @@
+.categories-slider {
+   &__slide {
+      &:nth-child(2n) {
+         .product-card {
+            &:hover {
+               background-color: $primary;
+            }
+         }
+      }
+   }
+}
