@@ -114,7 +114,7 @@ body.lock {
 
 
 .arrow-link {
-   display: flex;
+   display: inline-flex;
    align-items: center;
    text-decoration: none;
 
@@ -137,5 +137,28 @@ body.lock {
          opacity: 1;
          margin-left: 10px;
       }
+   }
+}
+
+.section-title {
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 36px;
+   color: $title;
+   @media screen and (min-width: 1500px) {
+      font-size: 35px;
+      line-height: 50px;
+   }
+}
+
+.subtitle {
+   font-size: 24px;
+   line-height: 30px;
+   font-weight: 700;
+   color: $title;
+
+   @media screen and (min-width: 1500px) {
+      font-size: 35px;
+      line-height: 42px;
    }
 }

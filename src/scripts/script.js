@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+// Footer menu list -------------------------------------->   
+
    if (document.body.clientWidth < 768) {
       openHeaders = document.querySelectorAll('.footer-col__header');
    
@@ -19,7 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
    }
    
-   
+// SEO-text dropbox -------------------------------------->
+
    const ShowMoreButtons = document.querySelectorAll('.text__link');
    
    if (ShowMoreButtons) {
@@ -30,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
                textVisible.classList.toggle('text__invisible--active');
                if (textVisible.classList.contains('text__invisible--active')) {
                   textVisible.style.maxHeight = textVisible.scrollHeight + "px";
+                  let open = ShowMoreButtons[0].textContent;
+                  open.innerHTML = "123";
+                  console.log(open);
                } else {
                   textVisible.style.maxHeight = 0;
                }
@@ -38,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    }
 
-   // RangeSlider -------------------------------------->
+// RangeSlider -------------------------------------->
 
    const rangeSlider = document.getElementById('range-slider');
 
@@ -76,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    }
 
-   // anchors choise item in header list
+// anchors choise item in header list
 
    const choiceAnchors = document.querySelectorAll('.choice__input');
 
@@ -102,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       };
    }
 
-   /*custom input number-------------------------------->*/
+/*custom input number-------------------------------->*/
    const quantityValue = document.querySelector('.input-value');
    const valueBtnsMunus = document.querySelector('.btn-value--prev');
    const valueBtnsPlus = document.querySelector('.btn-value--next');
@@ -119,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 
 
-   /*-----------------Main slider Banner-------------------------------*/
+/*-----------------Main slider Banner-------------------------------*/
 
    const mainSlider = new Swiper('.main-slider', { 
       // If we need pagination
@@ -137,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
    
    });
 
-   /*-----------------Slider brands-------------------------------*/
+/*-----------------Slider brands-------------------------------*/
 
    const brandSlider = new Swiper('.brands-carusel', { 
 
@@ -154,22 +160,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
    });
 
-      /*-----------------Slider brands-------------------------------*/
+/*-----------------Slider categories-------------------------------*/
 
-      const categoriesSlider = new Swiper('.categories-slider', { 
+   const categoriesSlider = new Swiper('.categories-slider', { 
 
-         slidesPerView: 1.5,
-         spaceBetween: 20,
-   
-         breakpoints: {
-            1366: {
-               slidesPerView: 4,
-            },
-            768: {
-               slidesPerView: 3,
-            },
-         }
-   
-      });
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+
+      navigation: {
+         nextEl: '.categories-slider__btn--next',
+         prevEl: '.categories-slider__btn--prev',
+      },
+
+      breakpoints: {
+         1366: {
+            slidesPerView: 4,
+         },
+         768: {
+            slidesPerView: 3,
+         },
+      }
+
+   });
+
+   /*-----------------Slider good-info-------------------------------*/
+
+   const goodInfoSlider = new Swiper('.good-info-slider', { 
+
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+
+      navigation: {
+         nextEl: '.good-info__btn--next',
+         prevEl: '.good-info__btn--prev',
+      },
+
+      breakpoints: {
+         1366: {
+            slidesPerView: 4,
+         },
+         768: {
+            slidesPerView: 3,
+         },
+      }
+
+   });
 });
 

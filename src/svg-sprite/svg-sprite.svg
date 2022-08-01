@@ -352,4 +352,10 @@
    <symbol id="arrow-right" viewBox="0 0 19.182 9">
       <path d="M0 3.829h16.611l-2.88-2.88L14.68 0l4.5 4.5-4.5 4.5-.949-.949 2.88-2.88H-.003z"/>
    </symbol>
+   <symbol id="left" viewBox="0 0 8.591 15.061">
+      <path stroke-width="1.5" d="M8.061 14.53l-7-7 7-7"/>
+   </symbol>
+   <symbol id="right" viewBox="0 0 8.591 15.061">
+      <path stroke-width="1.5" d="M8.061 14.53l-7-7 7-7"/>
+   </symbol>
 </svg>
