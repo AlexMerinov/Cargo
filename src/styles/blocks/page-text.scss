@@ -95,3 +95,21 @@
       }
    }
 }
+
+.js-text-hide {
+   &--no-icon {
+      .text__link {
+         &::after {
+            transform: rotate(180deg);
+            bottom: -10px;
+         }
+
+         &:hover {
+            &::after {
+               bottom: 0;
+               opacity: 1;
+            }
+         }
+      }
+   }
+}

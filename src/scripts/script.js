@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // SEO-text dropbox -------------------------------------->
 
    const ShowMoreButtons = document.querySelectorAll('.text__link');
+   const textHide = document.querySelector('.js-text-hide');
    
    if (ShowMoreButtons) {
       ShowMoreButtons.forEach((ShowMoreButton) => {
@@ -33,11 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
                textVisible.classList.toggle('text__invisible--active');
                if (textVisible.classList.contains('text__invisible--active')) {
                   textVisible.style.maxHeight = textVisible.scrollHeight + "px";
-                  let open = ShowMoreButtons[0].textContent;
-                  open.innerHTML = "123";
-                  console.log(open);
+                  ShowMoreButton.innerHTML = 'Свернуть';
+                  textHide.classList.add('js-text-hide--no-icon');
                } else {
                   textVisible.style.maxHeight = 0;
+                  ShowMoreButton.innerHTML = 'Развернуть';
+                  textHide.classList.remove('js-text-hide--no-icon');
                }
             })
          })
@@ -177,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slidesPerView: 4,
          },
          768: {
-            slidesPerView: 3,
+            slidesPerView: 2.4,
          },
       }
 
@@ -187,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    const goodInfoSlider = new Swiper('.good-info-slider', { 
 
-      slidesPerView: 2.2,
+      slidesPerView: 1,
       spaceBetween: 20,
 
       navigation: {
@@ -202,7 +204,33 @@ document.addEventListener("DOMContentLoaded", () => {
          768: {
             slidesPerView: 3,
          },
+         320: {
+            slidesPerView: 1.3,
+         }
       }
+
+   });
+
+   /*-----------------Slider categories-------------------------------*/
+
+   const itemCaruselBig = new Swiper('.carusel-big', { 
+
+      slidesPerView: 1,
+      spaceBetween: 10,
+
+   });
+
+   /*-----------------Slider categories-------------------------------*/
+
+   const itemCaruselMini = new Swiper('.carusel-mini', { 
+
+      slidesPerView: 3,
+      spaceBetween: 20,
+
+      navigation: {
+         nextEl: '.carusel-mini__btn-next',
+         prevEl: '.carusel-mini__btn-prev',
+      },
 
    });
 });
