@@ -5,38 +5,118 @@
   <div class="page__box">
     <!-- Header -->
     <header class="page__header header">
-      <div class="header-top"></div>
-      <div class="header-bottom"></div>
+      <div class="container">
+        <div class="header-mobile">
+          <button class="burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <a href="index.html" class="logo-mobile">
+            <img src="images/Logo.svg" alt="logo" />
+          </a>
+          <ul class="header-mobile__activities header-activities">
+            <li class="header-activities__item">
+              <a href="tel:+1(888)888-88-88" class="header-activities__link">
+                <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#phone"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-activities__item">
+              <a href="#" class="header-activities__link">
+                <svg class="icon icon--inst">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#inst"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-activities__item">
+              <a href="#" class="header-activities__link">
+                <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header-desktop">
+        <div class="header-desktop__top">
+          <div class="container">
+            <div class="header-top">
+              <nav class="nav-menu">
+                <ul class="nav-menu__list">
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">REVIEWS</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">SHIPPING AND PAYMENT</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">WHOLESALE</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">BLOG</a>
+                  </li>
+                  <li class="nav-menu__item">
+                    <a href="#" class="nav-menu__link">CONTACTS</a>
+                  </li>
+                </ul>
+              </nav>
+              <ul class="header-desktop__activities header-activities">
+                <li class="header-activities__item">
+                  <a href="tel:+1(888)888-88-88" class="header-activities__link"
+                    >+1 (888) 888-88-88</a
+                  >
+                </li>
+                <li class="header-activities__item">
+                  <a href="#" class="header-activities__link">
+                    <svg class="icon icon--inst">
+                      <use xlink:href="svg-sprite/svg-sprite.svg#inst"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="header-activities__item">
+                  <a href="#" class="header-activities__link">
+                    <svg class="icon">
+                      <use xlink:href="svg-sprite/svg-sprite.svg#cart"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-desktop__bot">
+          <div class="container">
+            <div class="header-bottom">
+              <a href="index.html" class="desktop-logo">
+                <img src="images/Logo.svg" alt="Logo" />
+              </a>
+              <div class="support">
+                <picture class="support__photo">
+                  <img src="images/support.png" alt="admin-photo" />
+                </picture>
+                <div class="support__content">
+                  <span class="support__name">jOHN SMITH</span>
+                  <a href="#" class="support__link"
+                    >Ask a question to the director</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <!-- / Header -->
 
     <!-- Main -->
     <main class="page__main main">
-      <!--Section--><!--/ Section-->
-      <section class="list-pages">
-        <div class="container">
-          <ul class="list-pages__list page-list">
-            <li class="page-list__item">
-              <a href="main-catalog.html" class="page-list__link"
-                >#Main Catalog</a
-              >
-            </li>
-            <li class="page-list__item">
-              <a href="product-catalog.html" class="page-list__link"
-                >#Product Catalog</a
-              >
-            </li>
-            <li class="page-list__item">
-              <a href="main-page.html" class="page-list__link">#Main Page</a>
-            </li>
-            <li class="page-list__item">
-              <a href="product-detail.html" class="page-list__link"
-                >#Product detail</a
-              >
-            </li>
-          </ul>
-        </div>
-      </section>
+      <!--Section-->
+      <section class="main__promo promo"></section>
+      <!--/ Section-->
       <!--Popup--><!--/ Popup-->
     </main>
     <!-- / Main -->
@@ -51,3 +131,7 @@
 <!-- / Page -->
 
 @@include('includes/footer.html')
+
+<!-- <svg class="icon">
+	<use xlink:href="svg-sprite/svg-sprite.svg#user"></use>
+</svg>  -->

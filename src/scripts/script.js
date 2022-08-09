@@ -1,7 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-// Footer menu list -------------------------------------->   
+// Header -------------------------------------->   
 
+   const burgerBtn = document.querySelector('.burger-btn');
+
+   if (burgerBtn) {
+      burgerBtn.addEventListener('click', () => {
+         let headerDT = document.querySelector('.header-desktop');
+         burgerBtn.classList.toggle('burger-btn--active');
+         headerDT.classList.toggle('header-desktop--active');
+      });
+   }
    if (document.body.clientWidth < 768) {
       openHeaders = document.querySelectorAll('.footer-col__header');
    
@@ -20,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
          }
       }
    }
+
    
 // SEO-text dropbox -------------------------------------->
 
@@ -127,111 +137,35 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 
 
-/*-----------------Main slider Banner-------------------------------*/
+   /*-----------------Slider categories-------------------------------*/
 
-   const mainSlider = new Swiper('.main-slider', { 
-      // If we need pagination
-      pagination: {
-         el: '.main-slider__pagination',
-         clickable: true,
-      },
-
-      autoplay: {
-         delay: 3000,
-      },
-
-      speed: 1000,
-      effect: 'fade',
-   
-   });
-
-/*-----------------Slider brands-------------------------------*/
-
-   const brandSlider = new Swiper('.brands-carusel', { 
-
-      slidesPerView: 1.5,
-
-      breakpoints: {
-         1366: {
-            slidesPerView: 5,
-         },
-         768: {
-            slidesPerView: 3,
-         },
-      }
-
-   });
-
-/*-----------------Slider categories-------------------------------*/
-
-   const categoriesSlider = new Swiper('.categories-slider', { 
-
-      slidesPerView: 1.2,
-      spaceBetween: 20,
-
-      navigation: {
-         nextEl: '.categories-slider__btn--next',
-         prevEl: '.categories-slider__btn--prev',
-      },
-
-      breakpoints: {
-         1366: {
-            slidesPerView: 4,
-         },
-         768: {
-            slidesPerView: 2.4,
-         },
-      }
-
-   });
-
-   /*-----------------Slider good-info-------------------------------*/
-
-   const goodInfoSlider = new Swiper('.good-info-slider', { 
+   const itemCaruselBig = new Swiper('.carusel-big__slider', { 
 
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 10,
 
-      navigation: {
-         nextEl: '.good-info__btn--next',
-         prevEl: '.good-info__btn--prev',
-      },
+      thumbs: {
+         swiper: {
+            el: '.carusel-mini__slider',
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+               768: {
+                  slidesPerView: 3,
+               }
+            },
 
-      breakpoints: {
-         1366: {
-            slidesPerView: 4,
-         },
-         768: {
-            slidesPerView: 3,
-         },
-         320: {
-            slidesPerView: 1.3,
+            navigation: {
+               nextEl: '.carusel-mini__btn--next',
+               prevEl: '.carusel-mini__btn--prev',
+            },
          }
       }
 
    });
 
-   /*-----------------Slider categories-------------------------------*/
+   /*-----------------light box-------------------------------*/
 
-   const itemCaruselBig = new Swiper('.carusel-big', { 
-
-      slidesPerView: 1,
-      spaceBetween: 10,
-
-   });
-
-   /*-----------------Slider categories-------------------------------*/
-
-   const itemCaruselMini = new Swiper('.carusel-mini', { 
-
-      slidesPerView: 3,
-      spaceBetween: 20,
-
-      navigation: {
-         nextEl: '.carusel-mini__btn-next',
-         prevEl: '.carusel-mini__btn-prev',
-      },
-
-   });
+   
 });
 

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-  <g id="Радиобаттн" transform="translate(-10 -19)">
-    <rect id="Чек" width="18" height="18" rx="9" transform="translate(10 19)" fill="#fff"/>
-    <rect id="Чек-2" data-name="Чек" width="10" height="10" rx="5" transform="translate(12.17 29.83) rotate(-60)" fill="#ea5e20"/>
-    <path id="_1" data-name="1" d="M1111.2.411A5,5,0,0,0,1116.2-4.54h-9.991A5,5,0,0,0,1111.2.411Z" transform="translate(-532.667 992.595) rotate(-60)" fill="#ff834d"/>
-  </g>
-</svg>
