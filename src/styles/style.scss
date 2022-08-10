@@ -8,6 +8,7 @@ body.lock {
 }
 
 .btn {
+   padding: 10px 20px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -16,4 +17,27 @@ body.lock {
    color: #fff;
    font-weight: 700;
    font-size: 18px;
+
+   border: none;
+   background-color: $primary;
+   transition: background-color 0.2s linear;
+   cursor: pointer;
+   &:hover {
+      background-color: #007bc6;
+   }
+}
+
+.label-link {
+   padding: 5px 25px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: start;
+   border: 2px solid #6ACD68;
+
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.2;
+   font-size: 13px;
+   color: #6ACD68;
+   text-align: center;
 }

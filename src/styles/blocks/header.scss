@@ -101,12 +101,13 @@
 }
 
 .header-desktop {
-   position: relative;
+   position: absolute;
    left: -100%;
    display: flex;
    flex-direction: column;
    width: 80vw;
    height: 100vh;
+   z-index: 100;
    transition: all 0.3s ease-in;
    background-color: $title;
    @media screen and (min-width: 788px) {
@@ -283,6 +284,7 @@
    @media screen and (min-width: 788px) {
       background-color: #fff;
       width: 100%;
+      height: auto;
    }
 }
 

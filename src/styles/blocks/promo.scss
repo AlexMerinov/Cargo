@@ -1,0 +1,309 @@
+.main {
+   &__promo {
+      margin-bottom: 30px;
+      @media screen and (min-width: 1376px) {
+         margin-bottom: 40px;
+      }
+   }
+}
+.promo {
+   &__title {
+      margin-bottom: 7px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h1 {
+         text-align: center;
+         font-style: normal;
+         text-transform: uppercase;
+         font-weight: 700;
+         font-size: 37px;
+         line-height: 1;
+         color: $title;
+      }
+      @media screen and (min-width: 1376px) {
+         margin-bottom: 13px;
+         align-items: start;
+         max-width: 567px;
+         h1 {
+            text-align: left;
+            font-size: 80px;
+         }
+      }
+   }
+
+   &__label-link {
+      margin-bottom: 15px;
+   }
+
+   &__buy {
+      margin-bottom: 20px;
+   }
+
+   &-buy {
+      padding: 23px 20px;
+      border: 2px solid #999999;
+      display: flex;
+      flex-direction: column;
+
+      &__desc {
+         display: block;
+         text-align: center;
+         font-style: normal;
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 22px;
+         color: $title;
+         margin-bottom: 8px; 
+
+         @media screen and (min-width: 1376px) {
+            text-align: left;
+         }
+      }
+
+      &__choice {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 20px;
+      }
+
+      &__content {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-bottom: 18px;
+
+         @media screen and (min-width:1378px) {
+            justify-content: space-between;
+         }
+      }
+
+      &__price {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         span {
+            display: block;
+            color: $title;
+            &:first-child {
+               font-style: normal;
+               font-weight: 400;
+               font-size: 27px;
+               line-height: 27px;
+               text-decoration-line: line-through;
+            }
+            &:last-child {
+               font-style: normal;
+               font-weight: 700;
+               font-size: 38px;
+               line-height: 46px;
+            }
+         }
+
+         @media screen and (min-width: 1376px) {
+            align-items: start;
+            span {
+               &:first-child {
+                  font-size: 18px;
+                  line-height: 22px;
+               }
+               &:last-child {
+                  font-size: 35px;
+                  line-height: 43px;
+               }
+            }
+         }
+      }
+
+      &__info {
+         display: none;
+         font-style: normal;
+         font-weight: 600;
+         font-size: 18px;
+         line-height: 22px;
+         color: $primary;
+         @media screen and (min-width: 1376px) {
+            display: block;
+         }
+      }
+
+      &__preview {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         display: none;
+         @media screen and (min-width: 1376px) {
+            display: block;
+         }
+      }
+
+      &__buttons {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+   }
+}
+
+.promo-offer {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
+   margin-bottom: 22px;
+   border: 2px solid $primary;
+   &__info {
+      margin-right: 20px;
+   }
+
+   &__title {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: $title;
+      margin-bottom: 5px;
+      span {
+         color: $primary;
+      }
+   }
+
+   p {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 17px;
+      color: $title;
+   }
+
+   &__preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 87px;
+      img {
+         object-fit: contain;
+         max-height: 100%;
+      }
+   }
+}
+
+.payment {
+   &__desc {
+      margin-bottom: 8px;
+      text-align: center;
+
+      @media screen and (min-width: 1378px) {
+         text-align: left;
+      }
+   }
+
+   &__method {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: #999999;
+      margin-right: 5px;
+   }
+   &__starting {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      color: $primary;
+      line-height: 22px;
+      margin-right: 5px;
+      .icon {
+         color: $title;
+         fill: #4A4AF4;
+         width: 17px;
+         height: 13px;
+      }
+   }
+
+   &__now {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #6ACD68;
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -5px;
+   }
+
+   &__item {
+      width: 26px;
+      height: 17px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px;
+      border: 1px solid $secondary;
+      border-radius: 3px;
+
+      margin-right: 5px;
+      margin-top: 5px;
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+.promo-carusel {
+   position: relative;
+   max-height: 687px;
+
+   &__slider {
+      height: 100%;
+   }
+
+   &__slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+         max-height: 100%;
+      }
+   }
+
+   &__btn {
+      position: absolute;
+      top: 50%;
+      padding: 0;
+      width: 12px;
+      height: 54px;
+      border: none;
+      background-color: transparent;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 2;
+
+      .icon {
+         width: 12px;
+         height: 54px;
+         fill: none;
+         stroke: $primary;
+      }
+
+      &--prev {
+         left: 0;
+      }
+
+      &--next {
+         right: 0;
+      }
+   }
+
+   @media screen and (min-width: 1376px) {
+      height: 687px;
+   }
+}
