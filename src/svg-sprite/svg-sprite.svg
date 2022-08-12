@@ -48,4 +48,61 @@
       <circle fill="currentColor" cx="4.5" cy="4.5" r="4"/>
       <circle fill="currentColor" cx="28.5" cy="31.5" r="4"/>
    </symbol>
+   <symbol id="line1" viewBox="0 0 252 110">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M251 1H139L1 109" opacity=".5"/>
+   </symbol>
+   <symbol id="line10" viewBox="0 0 528 28">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M526.5 1.5H46l-45 25" opacity=".1"/>
+   </symbol>
+   <symbol id="line11" viewBox="0 0 314 240">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M312.5 1.5h-84L1.5 239" opacity=".1"/>
+   </symbol>
+   <symbol id="line12" viewBox="0 0 270 172">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M268.5 1.5h-98L1.5 171" opacity=".1"/>
+   </symbol>
+   <symbol id="line13" viewBox="0 0 310 187">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M308.5 1.5H186L1.5 186" opacity=".1"/>
+   </symbol>
+   <symbol id="line14" viewBox="0 0 250 96">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M248.5 1.5h-103l-36-.5L1 94.5" opacity=".1"/>
+   </symbol>
+   <symbol id="line15" viewBox="0 0 204 66">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.5 65L81 1.5h121.5" opacity=".1"/>
+   </symbol>
+   <symbol id="line16" viewBox="0 0 181 50">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M180 1.5H68.5l-67 47" opacity=".1"/>
+   </symbol>
+   <symbol id="line17" viewBox="0 0 214 46">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M212.5 1.5H62L1.5 45" opacity=".1"/>
+   </symbol>
+   <symbol id="line2" viewBox="0 0 320 119">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M318.5 1h-68L106 117.5H1" opacity=".1"/>
+   </symbol>
+   <symbol id="line3" viewBox="0 0 207 131">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M206 1L41.5 129.5H1" opacity=".1"/>
+   </symbol>
+   <symbol id="line4" viewBox="0 0 298 161">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M296.5 1.5L96 159.5H1" opacity=".1"/>
+   </symbol>
+   <symbol id="line5" viewBox="0 0 180 19">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M178.5 1l-36 16.5H1" opacity=".1"/>
+   </symbol>
+   <symbol id="line6" viewBox="0 0 211 30">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M209.5 1.5L161 28.562H1" opacity=".1"/>
+   </symbol>
+   <symbol id="line7" viewBox="0 0 249 14">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M248 13L194 1.5H1.5" opacity=".1"/>
+   </symbol>
+   <symbol id="line8" viewBox="0 0 244 25">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M242.5 23.5H189l-27.5-22H1.5" opacity=".1"/>
+   </symbol>
+   <symbol id="line9" viewBox="0 0 332 60">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M330.5 58.5H134l-59-57H1" opacity=".1"/>
+   </symbol>
+   <symbol id="pin" viewBox="0 0 15 14">
+      <circle cx="7.5" cy="7" r="6" stroke-width="2"/>
+   </symbol>
+   <symbol id="pin-gradient" viewBox="0 0 19 18">
+      <circle cx="9.5" cy="9" r="9" opacity=".3"/>
+   </symbol>
 </svg>

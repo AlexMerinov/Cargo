@@ -1,0 +1,95 @@
+.overview {
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+   }
+
+   &__banner {
+      top: 0;
+      left: 50%;
+   }
+
+   &__item {
+      margin-bottom: 20px;
+   }
+
+   
+}
+
+.road-element {
+   position: relative;
+
+   &__name {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: $secondary;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      transition: all 0.2s linear;
+
+      &:hover {
+         color: $primary;
+      }
+   }
+
+   &__line {
+      position: absolute;
+      top: 100%;
+      right: 5px;
+      fill: none;
+      stroke: #999;
+      transform: translate(100%, -100%);
+      transition: all 0.2s ease;
+
+      &--1 {
+         top: 145%;
+         width: 250px;
+      }
+   }
+
+   &__pin {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      transition: all 0.2s linear;
+      &--1 {
+         left: 300px;
+         top: 129px;
+      }
+   }
+
+   &__bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 14px;
+      height: 14px;
+      fill: #00A0FF;
+      border-radius: 100%;
+      z-index: -1;
+   }
+
+   &__dot {
+      width: 14px;
+      height: 14px;
+      fill: #fff;
+      stroke: $primary;
+   }
+
+   .road-element__name:hover ~ .road-element__line {
+      stroke: $primary;
+   }
+
+   .road-element__name:hover ~ .road-element__pin {
+      box-shadow: 0 0 5px 5px rgba(0, 158, 255,0.5);
+   }
+}
