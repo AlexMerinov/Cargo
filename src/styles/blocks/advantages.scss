@@ -1,7 +1,15 @@
 .advantages {
+   background-color: rgba(153, 153, 153, 0.2);
+   &-box {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 18px;
+   }
    &-pagination {
       display: flex;
       align-items: center;
+      background-color: #fff;
+      order: 2;
       &__btn {
          cursor: pointer;
          flex: 1 1 auto;
@@ -69,7 +77,6 @@
       flex-direction: column;
       overflow: hidden;
       min-height: 436px;
-      background-color: rgb(153, 153, 153,  0.3);
       &__item {
          width: 100%;
          height: auto;
@@ -130,6 +137,7 @@
 
       @media screen and (min-width: 1378px) {
          min-height: 201px;
+         background-color: rgb(153, 153, 153,  0.2);
          &__item {
             padding: 27px 22px;
             flex-direction: row;
@@ -151,6 +159,13 @@
                text-align: left;
             }
          }
+      }
+   }
+   @media screen and (min-width: 1378px) {
+      background-color: transparent;
+      &-pagination {
+         order: 0;
+         background-color: transparent;
       }
    }
 }

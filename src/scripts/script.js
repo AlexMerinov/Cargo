@@ -84,12 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
          prevEl: '.promo-carusel__btn--prev',
       },
 
-      // breakpoints: {
-      //    768: {
-      //       navigation: false,
-      //    }
-      // },
-
    });
 
    const advantagesTabs = document.querySelectorAll('.advantages-box');
@@ -123,6 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       });
    
+   }
+
+   if (document.body.clientWidth < 768) {
+      const accessoriesSlider = new Swiper('.accessories-slider', { 
+
+         slidesPerView: 2.1,
+         spaceBetween: 10,
+      });
    }
 });
 
