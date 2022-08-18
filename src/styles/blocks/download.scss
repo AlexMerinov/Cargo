@@ -1,22 +1,24 @@
 .main {
    &__download {
+      padding-top: 60px;
+      padding-bottom: 28px;
       margin-bottom: 94px;
-      padding-top: 90px;
-      padding-bottom: 90px;
 
       @media screen and (min-width: 788px) {
-         padding-top: 60px;
-         padding-bottom: 28px;
+         padding-top: 90px;
+         padding-bottom: 90px;
       }
    }
 }
 
 .download {
+   background-color: #F5F5F5;
    &__wrapper {
       border: 5px solid #009EFF;
       padding: 21px 15px;
       min-height: 428px;
       margin-top: auto;
+      background-color: #fff;
 
       display: flex;
       flex-direction: column;
