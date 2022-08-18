@@ -34,11 +34,11 @@
       }
       @media screen and (min-width: 788px) {
          height: 100%;
-         width: auto;
+         width: 50%;
          display: flex;
          justify-content: end;
          &::after {
-            box-shadow: 55px 0px 27px -27px rgba(14, 14, 22, 1) inset;
+            box-shadow: 114px 0 66px -27px rgba(14, 14, 22, 1) inset;
          }
          img {
             width: auto;
@@ -118,6 +118,7 @@
 
          &--left {
             order: 2;
+            position: relative;
             &::after {
                display: block;
                box-shadow: 0px 53px 22px -29px rgba(255, 255, 255, 1) inset;

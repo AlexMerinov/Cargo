@@ -1,6 +1,9 @@
 .main {
    &__anim-baner {
-      padding: 75px 0;
+      padding: 25px 0;
+      @media screen and (min-width: 1378px)  {
+         padding: 75px 0;
+      }
    }
 }
 
@@ -97,10 +100,14 @@
 
    &__desc {
       font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 14px;
+      line-height: 18px;
       text-align: center;
       color: $title;
+      @media screen and (min-width: 1378px) {
+         font-size: 18px;
+         line-height: 22px;
+      }
    }
 
    &__round-box {

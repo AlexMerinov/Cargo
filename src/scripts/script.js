@@ -84,6 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
          prevEl: '.promo-carusel__btn--prev',
       },
 
+      pagination: {
+         el: '.promo-carusel__pagination',
+         clickable: true,
+      },
+      
+
    });
 
    const advantagesTabs = document.querySelectorAll('.advantages-box');
