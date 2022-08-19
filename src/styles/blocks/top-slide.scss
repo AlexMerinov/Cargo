@@ -1,0 +1,116 @@
+.main {
+   &__top-slider {
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 1378px) {
+         margin-bottom: 40px;
+      }
+   }
+}
+
+.top-slider {
+   background-color: #323941;
+
+   &__wrapper {
+      display: flex;
+      @media screen and (min-width: 1378px) {
+         flex-wrap: wrap;
+      }
+   }
+
+   &__slide {
+      @media screen and (min-width: 1378px) {
+         width: calc(100% / 7);
+      }
+   }
+
+   &__box {
+      position: relative;
+      &::after {
+         content: '';
+   
+         width: 100%;
+         height: 1px;
+         background-color: #e5e5e5;
+   
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 0;
+         display: none;
+
+         @media screen and (min-width: 1378px) {
+            display: block;
+         }
+      }
+   }
+
+   &__bottom {
+      text-align: center;
+      padding: 15px 0;
+      display: none;
+      background-color: $primary;
+
+      span {
+         display: block;
+         margin: 0 auto;
+
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 22px;
+         color: #fff;
+         text-transform: uppercase;
+      }
+
+      @media screen and (min-width: 1378px) {
+         display: block;
+      }
+   }
+}
+
+.top-slider-card {
+   display: block;
+   height: 100%;
+   padding: 10px 0;
+   text-align: center;
+   cursor: pointer;
+
+   transition: all 0.2s linear;
+
+   &__preview {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      margin-bottom: 5px;
+
+      img {
+         margin: 0 auto;
+         object-fit: cover;
+         max-height: 100%;
+      }
+   }
+
+   &__name {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.2;
+      color: #ececec;
+      text-transform: uppercase;
+      transition: all 0.2s linear;
+
+      @media screen and (min-width: 1378px) {
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 22px;
+      }
+   }
+
+   &:hover {
+      background-color: $primary;
+
+      &__name {
+         color: #fff;
+      }
+   }
+}

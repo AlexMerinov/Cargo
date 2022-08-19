@@ -1,0 +1,95 @@
+.main {
+   &__reviews {
+      margin-bottom: 30px;
+      @media screen and (min-width: 1378px) {
+         margin-bottom: 50px;
+      }
+   }
+}
+
+.reviews {
+   padding: 40px 0;
+   background-color: #ececec;
+   &__title {
+      margin-bottom: 40px;
+   }
+
+   &__box {
+      position: relative;
+   }
+
+   &__slider-btn {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: #fff;
+      border: 2px solid $primary;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      cursor: pointer;
+
+      .icon {
+         width: 12px;
+         height: 20px;
+         fill: $primary;
+      }
+
+      &--next {
+         right: 5px;
+      }
+      &--prev {
+         left: 5px;
+         .icon {
+            transform: rotate(180deg);
+         }
+      }
+
+      @media screen and (min-width: 788px) {
+         width: 50px;
+         height: 50px;
+
+         .icon {
+            width: 16px;
+            height: 28px;
+            fill: $primary;
+         }
+      }
+      @media screen and (min-width: 1378px) {
+         width: 70px;
+         height: 70px;
+
+         .icon {
+            width: 22px;
+            height: 40px;
+            fill: $primary;
+         }
+      }
+   }
+
+   &__slider-btn.swiper-button-disabled {
+      display: none;
+   }
+}
+
+.reviews-slider {
+   * {
+      box-sizing: border-box;
+   }
+   &__slide {
+      padding: 20px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border: 2px solid $primary;
+      @media screen and (min-width: 1378px) {
+         margin-bottom: 50px 8px;
+      }
+   }
+}

@@ -30,47 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
    }
 
+ /*-----------------Slider top-------------------------------*/
 
-// RangeSlider -------------------------------------->
+   if (document.body.clientWidth < 1378) {
+      const topSlider = new Swiper('.top-slider__swiper', { 
 
-   // const rangeSlider = document.getElementById('range-slider');
+         slidesPerView: 4,
 
-   // if (rangeSlider) {
-
-   //    noUiSlider.create(rangeSlider, {
-   //       start: [80, 8000000],
-   //       connect: true,
-   //       step: 1,
-   //       range: {
-   //          'min': [80],
-   //          'max': [8000000]
-   //       },
-   //    });
-
-   //    const input0 = document.getElementById('input-0');
-   //    const input1 = document.getElementById('input-1');
-   //    const inputs = [input0, input1];
-
-   //    rangeSlider.noUiSlider.on('update', function (values, handle) {
-   //       inputs[handle].value = (values[handle]);
-   //    });
-
-   //    const setRangeSlider = (i, value) => {
-   //       let arr = [null, null];
-   //       arr[i] = value;
-
-   //       rangeSlider.noUiSlider.set(arr);
-   //    };
-
-   //    inputs.forEach((el, index) => {
-   //       el.addEventListener('change', (e) => {
-   //          setRangeSlider(index, e.currentTarget.value)
-   //       });
-   //    });
-   // }
-
-// anchors choise item in header list
-
+         breakpoints: {
+            788: {
+                slidesPerView: 6,
+            },
+        }
+      });
+   }
 
    /*-----------------Slider categories-------------------------------*/
 
@@ -89,6 +62,47 @@ document.addEventListener("DOMContentLoaded", () => {
          clickable: true,
       },
       
+
+   });
+
+   const specifucate = new Swiper('.spec-slider', { 
+
+      slidesPerView: 1,
+
+      navigation: {
+         nextEl: '.spec-slider__btn--next',
+         prevEl: '.spec-slider__btn--prev',
+      },
+      
+      breakpoints: {
+         // when window width is <= 499px
+         788: {
+             slidesPerView: 3,
+         },
+         // when window width is <= 999px
+         1378: {
+             slidesPerView: 4,
+         }
+     }
+
+   });
+
+   const sliderReviews = new Swiper('.reviews-slider', { 
+
+      slidesPerView: 2,
+      spaceBetween: 15,
+
+      navigation: {
+         nextEl: '.reviews__slider-btn--next',
+         prevEl: '.reviews__slider-btn--prev',
+      },
+      
+      breakpoints: {
+         // when window width is <= 499px
+         788: {
+             slidesPerView: 3,
+         },
+     }
 
    });
 
