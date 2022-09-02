@@ -1,0 +1,103 @@
+.main {
+   &__main-banner {
+      margin-bottom: 82px;
+   }
+}
+
+.main-banner {
+   padding-top: 88px;
+   padding-bottom: 40px;
+   position: relative;
+   background: #F3F7FA;
+
+   &__wrapper {
+      position: relative;
+      z-index: 10;
+   }
+
+   &__content {
+      margin-bottom: 194px;
+      max-width: 336px;   
+      @media screen and (min-width: 768px) {
+         margin-bottom: 44px;         
+      }
+      @media screen and (min-width: 1366px) {
+         max-width: 429px; 
+         margin-bottom: 88px;         
+      }
+      @media screen and (min-width: 1920px) {
+         max-width: 551px;
+         margin-bottom: 208px;                                     
+      }
+   }
+
+   &__title {
+      margin-bottom: 20px;
+      @media screen and (min-width: 1920px) {
+         margin-bottom: 25px;        
+      }
+   }
+
+   &__desc {
+      display: none;
+      @media screen and (min-width: 768px) {
+         display: block;
+         margin-bottom: 25px;
+         p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $text;
+         }
+      }
+      @media screen and (min-width: 1366px) {
+         margin-bottom: 35px;  
+         p {
+            font-size: 19px;
+            line-height: 22px; 
+         }
+      }
+      @media screen and (min-width: 1366px) {
+         margin-bottom: 50px;
+      }
+   }
+
+   &__slider {
+      margin-top: auto;
+   }
+
+   &__bg {
+      position: absolute;
+      top: 230px;
+      left: 0;
+      right: 0;
+      bottom: 140px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: right top;
+      }
+      @media screen and (min-width: 768px) {
+         top: 60px;
+         bottom: 90px;
+      }
+      @media screen and (min-width: 1366px) {
+         bottom: 0;
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      padding-top: 60px;        
+   }
+
+   @media screen and (min-width: 1366px) {
+      padding-top: 124px;        
+   }
+
+   @media screen and (min-width: 1920px) {
+      padding-top: 218px;   
+      padding-bottom: 25px;     
+   }
+               
+}
