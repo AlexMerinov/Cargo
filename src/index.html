@@ -275,7 +275,7 @@
         </div>
       </section>
 
-      <section class="main__about about">
+      <section class="main__about about">           
          <div class="container">
             <div class="about__wrapper">
                <div class="about__box-left">
@@ -299,6 +299,11 @@
                         и узнать, как сделать перевозку товара дешевле.
                      </p>
                   </div>
+                  <button type="button" class="about__btn go-js-show-btn">
+                     <svg class="icon">
+                        <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
+                     </svg>
+                  </button>
                   <a href="#" class="link about__link">О компании</a>
                </div>
                <div class="about__box-right">
@@ -443,6 +448,77 @@
         </div>
       </section>
       <!--/ Section-->
+
+      <!--section Feedback-->
+      <section class="main__feedback">
+         <div class="container">
+            <div class="feedback__wrapper">
+               <div class="feedback__item">
+                  <h2 class="title feedback__title">Связаться с нами</h2>
+                  <div class="feedback__info">
+                     <span class="feedback__text">
+                        Если у вас остались вопросы, оставьте 
+                        сообщение в форме обратной связи
+                        или звоните нам  по нижеуказанным 
+                        телефонам:
+                     </span>
+                     <div class="feedback__subtitle">Контактные телефоны</div>
+                     <a href="tel:+7(499)3908377" class="link feedback__link">+7 (499) 390-83-77</a>
+                     <a href="tel:+7(499)3908377" class="link feedback__link">+7 (925) 869-79-09</a>
+                  </div>
+               </div>
+               <div class="feedback__item">
+                  <div class="feedback__info">
+                     <div class="feedback__subtitle">Адрес</div>
+                     <span class="feedback__text">
+                        г. Москва, м. Кунцевская, ул. Верейская д. 17
+                     </span>
+                     <div class="feedback__subtitle">Email</div>
+                     <a href="mailto:info@cargo-forward.ru" class="link feedback__link">info@cargo-forward.ru</a>
+                     <div class="feedback__subtitle">График работы</div>
+                     <span class="feedback__text">
+                        Пн - Вс: 9:00 - 20:00
+                     </span>
+                  </div>
+               </div>
+               <div class="feedback__item">
+                  <form action="" class="feedback__form form">
+                     <div class="field form__field">
+                        <input
+                        type="text"
+                        name="name"
+                        class="input form__input"
+                        autocomplete="off"
+                        placeholder="Ваше имя">
+                        <svg class="icon">
+                           <use xlink:href="svg-sprite/svg-sprite.svg#User"></use>
+                        </svg>
+                     </div>
+                     <div class="field form__field">
+                        <input
+                        id="phone"
+                        type="text"
+                        name="phone"
+                        class="input form__input"
+                        autocomplete="off"
+                        placeholder="Ваш телефон">
+                        <svg class="icon">
+                           <use xlink:href="svg-sprite/svg-sprite.svg#Phone"></use>
+                        </svg>
+                     </div>
+                     <label class="form__label">
+                        <input type="checkbox" class="form__ckeckbox">
+                        <div class="form__check"></div>
+                        Я доверяю свои <a href="#" class="link">персональные данные</a>
+                     </label>
+                     <button type="button" class="btn">Отправить</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!--/ Feedback-->
+
       <!--Popup--><!--/ Popup-->
     </main>
     <!-- / Main -->
@@ -450,64 +526,62 @@
     <!-- Footer -->
     <footer class="page__footer footer">
       <div class="container">
-         <div class="footer__wrapper">
-            <nav class="footer-nav">
-               <div class="footer-nav__item">
-                  <div class="footer-nav__header">
-                     <a href="#">Услуги</a>
-                     <svg class="icon">
-                        <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
-                     </svg>
-                  </div>
-                  <ul class="footer-list">
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Грузоперевозки
-                           по России</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Грузоперевозки по Москве
-                           и области</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Перевозки сыпучих грузов</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Аренда спецтехники</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Страхование</a>
-                     </li>
-                  </ul>
+         <div class="footer-nav">
+            <div class="footer-nav__item">
+               <div class="footer-nav__header go-js-header-btn">
+                  <a href="#">Услуги</a>
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
+                  </svg>
                </div>
-               <div class="footer-nav__item">
-                  <div class="footer-nav__header">
-                     <a href="#">О компании</a>
-                     <svg class="icon">
-                        <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
-                     </svg>
-                  </div>
-                  <ul class="footer-list">
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Описание деятельности</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">География грузоперевозок</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Информация для клиентов</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Контактная информация</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Новости</a>
-                     </li>
-                     <li class="footer-list__item">
-                        <a href="#" class="footer-list__link">Статьи</a>
-                     </li>
-                  </ul>
+               <ul class="footer-list">
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Грузоперевозки
+                        по России</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Грузоперевозки по Москве
+                        и области</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Перевозки сыпучих грузов</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Аренда спецтехники</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Страхование</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer-nav__item">
+               <div class="footer-nav__header go-js-header-btn">
+                  <a href="#">О компании</a>
+                  <svg class="icon">
+                     <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
+                  </svg>
                </div>
-            </nav>
+               <ul class="footer-list">
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Описание деятельности</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">География грузоперевозок</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Информация для клиентов</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Контактная информация</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Новости</a>
+                  </li>
+                  <li class="footer-list__item">
+                     <a href="#" class="footer-list__link">Статьи</a>
+                  </li>
+               </ul>
+            </div>
             <div class="footer__info">
                <a href="index.html" class="footer__logo">
                   <img src="images/footer-logo.svg" alt="logo">
@@ -515,7 +589,7 @@
                <span class="footer__copyright">© 2007-2022 «Cargo-forward.ru» все права защищены</span>
                <div class="footer__dev">
                   Разработано:
-                  <a href="#" class="link">Plastilin art         </a>
+                  <a href="#" class="link">Plastilin art</a>
                </div>
             </div>
          </div>

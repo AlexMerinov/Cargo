@@ -1,17 +1,13 @@
 .footer {
    background-color: $light;
    padding: 30px 0;
-   &__wrapper {
-      display: flex;
-      flex-direction: column;
-      @media screen and (min-width: 768px) {
-         flex-direction: row;
-      }
-   }
 
    &__info {
       display: flex;
       flex-direction: column;
+      width: 100%;
+      max-width: 260px;
+      flex: 1 1 auto;
       @media screen and (min-width: 768px) {
          order: -1;
       }
@@ -40,11 +36,15 @@
    flex-direction: column;
    &__item {
       margin-bottom: 26px;
+      width: 100%;
+      flex: 1 1 auto;
    }
    &__header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      transition: all 0.2s linear;
+      cursor: pointer;
       a {
          font-weight: 600;
          font-size: 19px;
@@ -53,20 +53,41 @@
       }
 
       .icon {
-         width: 10px;
-         height: 5px;
+         width: 12px;
+         height: 6px;
          fill: none;
          stroke: $dark;
+         transition: all 0.2s linear;
+      }
+
+      &--active {
+         margin-bottom: 26px;
+         .icon {
+            transform: rotate(180deg);
+         }
       }
    }
 
    @media screen and (min-width: 768px) {
       flex-direction: row;
+      justify-content: space-between;
+      &__item {
+         max-width: 220px;
+      }
+
+      &__header {
+         margin-bottom: 26px;
+         .icon {
+            display: none;
+         }
+      }
    }
 }
 
 .footer-list {
-   padding-top: 26px;
+   max-height: 0;
+   overflow: hidden;
+   transition: all 0.2s linear;
    &__item {
       margin-bottom: 15px;
       &:last-child {
@@ -79,5 +100,14 @@
       font-size: 16px;
       line-height: 19px;
       color: $text;
+      transition: all 0.2s linear;
+      &:hover {
+         color: $primary;
+         text-decoration: underline;
+      }
+   }
+
+   @media screen and (min-width: 768px) {
+      max-height: 100%;
    }
 }

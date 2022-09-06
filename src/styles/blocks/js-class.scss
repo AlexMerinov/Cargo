@@ -1,0 +1,9 @@
+.go-js-show-btn {
+   transition: all 0.2s linear;
+   &--active {
+      transform: rotate(180deg);
+      .icon {
+         stroke: $dark;
+      }
+   }
+}

@@ -1,15 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
 
    // body lock--------------------------------------> 
-
-   // Header -------------------------------------->   
       
    if (document.body.clientWidth < 1366) {
-      openHeaders = document.querySelectorAll('.h-nav__header');
 
-   openHeaders.forEach((openHeader) => {
-      openHeader.addEventListener('click', listOpen);
-   });
+      // Header -------------------------------------->   
+      openHeaders = document.querySelectorAll('.h-nav__header');
+      openHeaders.forEach((openHeader) => {
+         openHeader.addEventListener('click', listOpen);
+      });
 
       function listOpen(e) {
          let currentItem = e.target.closest('.h-nav__header');
@@ -23,16 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
             currentItem.style.paddingBottom = 0;
          }
       }
-   }
 
-   // Menu header---------------------------------------------->
-
-   if (document.body.clientWidth < 1366) {
+      
+      // Menu header---------------------------------------------->
       bergerMenu = document.querySelector('.burger-menu');
       header     = document.querySelector('.header');
       closeBtn   = document.querySelector('.mobile-menu__close');
       mobileMenu = document.querySelector('.mobile-menu');
-   
+
       if (header) {
          bergerMenu.addEventListener('click', function () {
             header.classList.add('go-js-header');
@@ -41,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
                mobileMenu.classList.add('mobile-menu--active');
             }
          });
-   
+
          closeBtn.addEventListener('click', function () {
             header.classList.remove('go-js-header');
             if (!header.classList.contains('go-js-header')) {
@@ -52,8 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
    }
 
-
-   //main slider
+   //main slider---------------------------------------------------->
 
    const mainSlider = new Swiper('.main-slider__box', {
       slidesPerView: 1.2,
@@ -72,7 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
        }
    });
    
-      //main slider
+   //end project slider----------------------------------->
+
    if (document.body.clientWidth < 768) {
       const projectSlider = new Swiper('.end-project-swiper', {
          slidesPerView: 1,
@@ -83,9 +80,32 @@ document.addEventListener("DOMContentLoaded", () => {
             clickable: true,
          },
       });
+
+      //show more btn in about us block------------------------------------------>
+   
+      const textBlock = document.querySelector('.about__text');
+      if (!textBlock) retutn; 
+         const showMoreBtn = document.querySelector('.go-js-show-btn');
+         showMoreBtn.addEventListener('click', textOpen);
+      
+      if (textBlock.scrollHeight >= 268) {
+         showMoreBtn.style.display = "block"
+         function textOpen(e) {
+            let btnElement = e.target.closest('.go-js-show-btn');
+            let textBoxElement = btnElement.previousElementSibling;
+            btnElement.classList.toggle('go-js-show-btn--active');
+            if (btnElement.classList.contains('go-js-show-btn--active')) {
+                  textBoxElement.style.maxHeight = textBoxElement.scrollHeight + "px";
+               } else {
+                  textBoxElement.style.maxHeight = 268 + "px";
+            }
+         } 
+      } else {
+         showMoreBtn.style.display = "none";
+      }
    }
 
-   //counter
+   //counter---------------------------------------------->
 
    const time          = 2000;
    const step          = 1;
@@ -115,8 +135,34 @@ document.addEventListener("DOMContentLoaded", () => {
          }
       });
    }
-   
+
+   //drop box menu navigation Footer----------------------------------->
+
+   if (document.body.clientWidth < 768) {
+      const headerBtns = document.querySelectorAll('.go-js-header-btn');
+      
+      if (!headerBtns) retutn; 
+      
+      headerBtns.forEach((headerBtn) => {
+         headerBtn.addEventListener('click', menuOpen)
+      });
+
+      function menuOpen(e) {
+         let openBtn = e.target.closest('.go-js-header-btn')
+         let openList = e.target.nextElementSibling;
+         openBtn.classList.toggle('footer-nav__header--active');
+         if (openBtn.classList.contains('footer-nav__header--active')) {
+            openList.style.maxHeight = openList.scrollHeight + "px";
+         } else {
+            openList.style.maxHeight = 0;
+      }
+      }
+   }
+
+   // ----------------------------mask---------------------------------------
+   let element = document.getElementById('phone');
+   let maskOptions = {
+      mask: '+{7}(000)000-00-00'
+   };
+   let mask = IMask(element, maskOptions);
 });
-
-
-
