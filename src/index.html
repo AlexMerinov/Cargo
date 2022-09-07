@@ -1,4 +1,4 @@
-@@include('includes/header.html', { 'title' : 'New Project' })
+@@include('includes/header.html', { 'title' : 'Cargo-Forward' })
 
 <!-- Page -->
 <div class="page">
@@ -151,13 +151,13 @@
                 <a href="mailto:info@cargo-forward.ru">info@cargo-forward.ru</a>
               </li>
               <li class="h-contacts__item">
-                <span>Email</span>
-                <a href="mailto:info@cargo-forward.ru">info@cargo-forward.ru</a>
+                <span>Обратная связь</span>
+                <button type="button" class="h-contacts__btn go-js-open-popup" data-popup-name="popup_1">Заказать звонок</button>
               </li>
             </ul>
             <div class="header__price h-price">
               <div class="h-price__btn">
-                <button type="button" class="btn">
+                <button type="button" class="btn go-js-open-popup" data-popup-name="popup_2">
                   <svg class="icon">
                     <use
                       xlink:href="svg-sprite/svg-sprite.svg#Calculator"
@@ -450,6 +450,17 @@
       <!--/ Section-->
 
       <!--section Feedback-->
+      <section class="main__question question">
+         <div class="container">
+            <div class="question-box">
+               <div class="question-box__pagination"></div>
+               <div class="question-box__content"></div>
+            </div>
+         </div>
+      </section>
+      <!--/ Feedback-->
+
+      <!--section Feedback-->
       <section class="main__feedback">
          <div class="container">
             <div class="feedback__wrapper">
@@ -518,8 +529,6 @@
          </div>
       </section>
       <!--/ Feedback-->
-
-      <!--Popup--><!--/ Popup-->
     </main>
     <!-- / Main -->
 
@@ -599,6 +608,96 @@
   </div>
 </div>
 <!-- / Page -->
+
+<!--Popup-->
+<div class="body__popup popup go-js-popup" data-popup-name="popup_1">
+   <div class="popup__box">
+      <div class="popup__window">
+         <form action="" method="post" class="popup__form form">
+            <h2 class="title popup__title">Заказать обратный звонок</h2>
+            <span class="popup__text">
+               Если у Вас есть вопросы по оформлению рейса,
+               или Вы хотите обсудить стоимость или услугу,
+               закажите звонок и наш консультант Вам перезвонит
+            </span>
+            <div class="field form__field">
+               <input
+               id="phone"
+               type="text"
+               name="phone"
+               class="input form__input"
+               autocomplete="off"
+               placeholder="Ваш телефон">
+               <svg class="icon">
+                  <use xlink:href="svg-sprite/svg-sprite.svg#Phone"></use>
+               </svg>
+            </div>
+            <button type="button" class="btn">Отправить</button>
+         </form>
+         <button class="popup__close go-js-close-popup"></button>
+      </div>
+   </div>
+</div>
+
+<div class="body__popup popup go-js-popup" data-popup-name="popup_2">
+   <div class="popup__box">
+      <div class="popup__window popup__window--calc">
+         <div class="popup__calc calc">
+            <div class="calc__box calc__box--form">
+               <span class="calc__text">Город отправления</span>
+               <span class="calc__city">Москва (Московская область)</span>
+               <div class="drop-down__item calc-choice">
+                  <div class="calc-choice__header go-js-choice-header">
+                    <span class="calc-choice__name">Выберите город доставки</span>
+                    <svg class="icon">
+                      <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
+                    </svg>
+                  </div>
+                  <ul class="calc-choice__list">
+                    <li class="calc-choice__item">
+                      <label class="calc-choice__label choice-element">
+                        <span class="choice-element__name">Москва (Московская область#1)</span>
+                        <input class="choice-element__input" name="city" value="1.1" type="radio" />
+                        <span class="choice-element__checkbox"></span>
+                      </label>
+                    </li>
+                    <li class="calc-choice__item">
+                     <label class="calc-choice__label choice-element">
+                       <span class="choice-element__name">Москва (Московская область#2)</span>
+                       <input class="choice-element__input" name="city" value="1.2" type="radio" />
+                       <span class="choice-element__checkbox"></span>
+                     </label>
+                   </li>
+                   <li class="calc-choice__item">
+                     <label class="calc-choice__label choice-element">
+                       <span class="choice-element__name">Москва (Московская область#3)</span>
+                       <input class="choice-element__input" name="city" value="1.3" type="radio" />
+                       <span class="choice-element__checkbox"></span>
+                     </label>
+                   </li>
+                   <li class="calc-choice__item">
+                     <label class="calc-choice__label choice-element">
+                       <span class="choice-element__name">Москва (Московская область#4)</span>
+                       <input class="choice-element__input" name="city" value="1.4" type="radio" />
+                       <span class="choice-element__checkbox"></span>
+                     </label>
+                   </li>
+                  </ul>
+                </div>
+            </div>
+            <div class="calc__box calc__box--result">
+               <span>
+                  Заполните все поля в форме-калькуляторе, чтобы
+                  увидеть результат Вашего заказа и закать консультацию 
+                  у наших специалистов
+               </span>
+            </div>
+         </div>
+         <button class="popup__close go-js-close-popup"></button>
+      </div>
+   </div>
+</div>
+<!--/ Popup-->
 
 @@include('includes/footer.html')
 

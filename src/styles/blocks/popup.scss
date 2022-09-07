@@ -1,0 +1,83 @@
+.body {
+   &__popup {
+      display: none;
+      opacity: 0;
+      position: fixed;
+      overflow: auto;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(54, 54, 54, 0.5);
+      z-index: 100;
+      transition: all 0.2s linear;
+      &--active {
+         transition: all 0.2s linear;
+         display: block;
+         opacity: 1;
+      }
+   }
+}
+.popup {
+   &__box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 100%;
+   }
+
+   &__window {
+      width: 100%;
+      max-width: 500px;
+      background-color: $light;
+      padding: 50px;
+      position: relative;
+      &--calc {
+         max-width: 1240px;
+         height: 900px;
+      }
+   }
+
+   &__title {
+      margin-bottom: 10px;
+   }
+
+   &__text {
+      display: block;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $text;
+      margin-bottom: 25px;
+   }
+
+   &__close {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      &::before,
+      &::after {
+         content: '';
+         display: block;
+         width: 100%;
+         height: 2px;
+         background-color: $dark;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+      }
+
+      &::before {
+         transform: translateX(-50%) rotate(45deg);
+      }
+      &::after {
+         transform: translateX(-50%) rotate(-45deg);
+      }
+   }
+}

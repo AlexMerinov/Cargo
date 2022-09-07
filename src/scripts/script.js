@@ -103,6 +103,27 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
          showMoreBtn.style.display = "none";
       }
+
+         //drop box menu navigation Footer----------------------------------->
+
+      const headerBtns = document.querySelectorAll('.go-js-header-btn');
+      
+      if (!headerBtns) retutn; 
+      
+      headerBtns.forEach((headerBtn) => {
+         headerBtn.addEventListener('click', menuOpen)
+      });
+
+      function menuOpen(e) {
+         let openBtn = e.target.closest('.go-js-header-btn')
+         let openList = e.target.nextElementSibling;
+         openBtn.classList.toggle('footer-nav__header--active');
+         if (openBtn.classList.contains('footer-nav__header--active')) {
+            openList.style.maxHeight = openList.scrollHeight + "px";
+         } else {
+            openList.style.maxHeight = 0;
+         }
+      }
    }
 
    //counter---------------------------------------------->
@@ -136,33 +157,64 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    }
 
-   //drop box menu navigation Footer----------------------------------->
-
-   if (document.body.clientWidth < 768) {
-      const headerBtns = document.querySelectorAll('.go-js-header-btn');
-      
-      if (!headerBtns) retutn; 
-      
-      headerBtns.forEach((headerBtn) => {
-         headerBtn.addEventListener('click', menuOpen)
-      });
-
-      function menuOpen(e) {
-         let openBtn = e.target.closest('.go-js-header-btn')
-         let openList = e.target.nextElementSibling;
-         openBtn.classList.toggle('footer-nav__header--active');
-         if (openBtn.classList.contains('footer-nav__header--active')) {
-            openList.style.maxHeight = openList.scrollHeight + "px";
-         } else {
-            openList.style.maxHeight = 0;
-      }
-      }
-   }
-
    // ----------------------------mask---------------------------------------
    let element = document.getElementById('phone');
    let maskOptions = {
       mask: '+{7}(000)000-00-00'
    };
    let mask = IMask(element, maskOptions);
+
+   /*----------------------------- Popup ---------------------------------*/
+
+   const openPopup = (popupName) => {
+      const popups = document.querySelectorAll('.go-js-popup');
+      if (!popups) return;
+      popups.forEach((popup) => {
+         if (popup.dataset.popupName == popupName) {
+            popup.classList.add('body__popup--active');
+         }
+
+         const closePopups = document.querySelectorAll('.go-js-close-popup');
+         if (!closePopups) return;
+         closePopups.forEach((closePopup) => {
+            closePopup.addEventListener("click", (event) => {
+               if (popup.classList.contains('body__popup--active')) {
+                  popup.classList.remove('body__popup--active');
+               }
+            });
+         });
+
+      });
+   }
+
+   const popupButtons = document.querySelectorAll('.go-js-open-popup');
+   if (!popupButtons) return;
+   popupButtons.forEach((popupButton) => {
+      popupButton.addEventListener("click", (event) => {
+         event.preventDefault();
+         openPopup(popupButton.dataset.popupName);
+      });
+   });
+
+   //drop box menu navigation Footer----------------------------------->
+
+   const choiceHeaders = document.querySelectorAll('.go-js-choice-header');
+
+   if (!choiceHeaders) retutn; 
+   
+   choiceHeaders.forEach((choiceHeader) => {
+      choiceHeader.addEventListener('click', menuOpen)
+   });
+
+   function menuOpen(e) {
+      let choiceTitle = e.target.closest('.go-js-choice-header')
+      let choiceList = e.target.nextElementSibling;
+      choiceTitle.classList.toggle('go-js-choice-click');
+      if (choiceTitle.classList.contains('go-js-choice-click')) {
+         choiceList.style.maxHeight = choiceList.scrollHeight + "px";
+         console.log(choiceList);
+      } else {
+         choiceList.style.maxHeight = 0;
+      }
+   }
 });
