@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (header.classList.contains('go-js-header')) {
                bergerMenu.classList.add('burger-menu--active');
                mobileMenu.classList.add('mobile-menu--active');
+               body.classList.add('lock');
             }
          });
 
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!header.classList.contains('go-js-header')) {
                bergerMenu.classList.remove('burger-menu--active');
                mobileMenu.classList.remove('mobile-menu--active');
+               body.classList.remove('lock');
             }
          });
       }
@@ -158,13 +160,16 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 
    // ----------------------------mask---------------------------------------
-   let element = document.getElementById('phone');
-   let maskOptions = {
-      mask: '+{7}(000)000-00-00'
-   };
-   let mask = IMask(element, maskOptions);
+   const elements = document.querySelectorAll('.go-js-phone-mask'); 
+   elements.forEach((element) => {
+      let maskOptions = {
+         mask: '+{7}(000)000-00-00'
+      };
+      let mask = IMask(element, maskOptions);
+   })
 
    /*----------------------------- Popup ---------------------------------*/
+   const body = document.querySelector('body');
 
    const openPopup = (popupName) => {
       const popups = document.querySelectorAll('.go-js-popup');
@@ -172,6 +177,7 @@ document.addEventListener("DOMContentLoaded", () => {
       popups.forEach((popup) => {
          if (popup.dataset.popupName == popupName) {
             popup.classList.add('body__popup--active');
+            body.classList.add('lock');
          }
 
          const closePopups = document.querySelectorAll('.go-js-close-popup');
@@ -180,6 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
             closePopup.addEventListener("click", (event) => {
                if (popup.classList.contains('body__popup--active')) {
                   popup.classList.remove('body__popup--active');
+                  body.classList.remove('lock');
                }
             });
          });
@@ -196,7 +203,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
    });
 
-   //drop box menu navigation Footer----------------------------------->
+   //drop Calculate----------------------------------->
+
+   // drop-box
 
    const choiceHeaders = document.querySelectorAll('.go-js-choice-header');
 
@@ -209,12 +218,59 @@ document.addEventListener("DOMContentLoaded", () => {
    function menuOpen(e) {
       let choiceTitle = e.target.closest('.go-js-choice-header')
       let choiceList = e.target.nextElementSibling;
-      choiceTitle.classList.toggle('go-js-choice-click');
-      if (choiceTitle.classList.contains('go-js-choice-click')) {
+      choiceTitle.classList.toggle('calc-choice__header--active');
+      if (choiceTitle.classList.contains('calc-choice__header--active')) {
          choiceList.style.maxHeight = choiceList.scrollHeight + "px";
-         console.log(choiceList);
       } else {
          choiceList.style.maxHeight = 0;
       }
    }
+
+
+   // choice truck
+
+   const trackChoices = document.querySelectorAll('.go-js-coice-track');
+   if (!trackChoices) return;
+
+   trackChoices.forEach((trackChoice) => {
+      const tabsBtn = trackChoice.querySelectorAll(".go-js-coice-tab");
+      const tabsItems = trackChoice.querySelectorAll('.go-js-coice-content');
+
+      tabsBtn.forEach(function (item) {
+         item.addEventListener("click", function () {
+            let currentBtn = item.getAttribute("data-tab");
+            tabsItems.forEach(function(item) {
+               if (item.id == currentBtn) {
+                  item.classList.add('choice-truck__preview--active');
+               } else {
+                  item.classList.remove('choice-truck__preview--active');
+               }
+            });
+         });
+      });
+   });
+
+
+   // anchors choise item in header list
+
+   const cityAnchors = document.querySelectorAll('.go-js-choice-item')
+   if (!cityAnchors) return;
+
+   cityAnchors.forEach((cityAnchor) => {
+      const choiceName   = document.querySelector('.calc-choice__name').textContent;
+      const thisAnchor   = cityAnchor.querySelector('.choice-element__input');
+      cityAnchor.onclick = newTitle;
+
+      function newTitle() {
+         if (thisAnchor.checked) {
+            let activeAnchor    = this.querySelector('.choice-element__name').textContent;
+            let choiceTitleName = this.closest('.calc-choice').querySelector('.calc-choice__name');
+            choiceTitleName.innerHTML = activeAnchor;
+         } else {
+            let choiceTitleName = this.closest('.calc-choice').querySelector('.calc-choice__name');
+            choiceTitleName.innerHTML = choiceName;
+         }
+      }
+ 
+   })
 });

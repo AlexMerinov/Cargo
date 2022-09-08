@@ -498,7 +498,7 @@
                         <input
                         type="text"
                         name="name"
-                        class="input form__input"
+                        class="input form__input input--with-icon"
                         autocomplete="off"
                         placeholder="Ваше имя">
                         <svg class="icon">
@@ -510,7 +510,7 @@
                         id="phone"
                         type="text"
                         name="phone"
-                        class="input form__input"
+                        class="input form__input input--with-icon go-js-phone-mask"
                         autocomplete="off"
                         placeholder="Ваш телефон">
                         <svg class="icon">
@@ -625,7 +625,7 @@
                id="phone"
                type="text"
                name="phone"
-               class="input form__input"
+               class="input form__input input--with-icon go-js-phone-mask"
                autocomplete="off"
                placeholder="Ваш телефон">
                <svg class="icon">
@@ -644,46 +644,99 @@
       <div class="popup__window popup__window--calc">
          <div class="popup__calc calc">
             <div class="calc__box calc__box--form">
-               <span class="calc__text">Город отправления</span>
-               <span class="calc__city">Москва (Московская область)</span>
-               <div class="drop-down__item calc-choice">
-                  <div class="calc-choice__header go-js-choice-header">
-                    <span class="calc-choice__name">Выберите город доставки</span>
-                    <svg class="icon">
-                      <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
-                    </svg>
-                  </div>
-                  <ul class="calc-choice__list">
-                    <li class="calc-choice__item">
-                      <label class="calc-choice__label choice-element">
-                        <span class="choice-element__name">Москва (Московская область#1)</span>
-                        <input class="choice-element__input" name="city" value="1.1" type="radio" />
-                        <span class="choice-element__checkbox"></span>
-                      </label>
-                    </li>
-                    <li class="calc-choice__item">
-                     <label class="calc-choice__label choice-element">
-                       <span class="choice-element__name">Москва (Московская область#2)</span>
-                       <input class="choice-element__input" name="city" value="1.2" type="radio" />
-                       <span class="choice-element__checkbox"></span>
-                     </label>
-                   </li>
-                   <li class="calc-choice__item">
-                     <label class="calc-choice__label choice-element">
-                       <span class="choice-element__name">Москва (Московская область#3)</span>
-                       <input class="choice-element__input" name="city" value="1.3" type="radio" />
-                       <span class="choice-element__checkbox"></span>
-                     </label>
-                   </li>
-                   <li class="calc-choice__item">
-                     <label class="calc-choice__label choice-element">
-                       <span class="choice-element__name">Москва (Московская область#4)</span>
-                       <input class="choice-element__input" name="city" value="1.4" type="radio" />
-                       <span class="choice-element__checkbox"></span>
-                     </label>
-                   </li>
-                  </ul>
+              <span class="calc__text">Город отправления</span>
+              <div class="calc__city">Москва (Московская область) <span class="calc__question-icon question-icon">?</span></div>
+              <div class="calc__city-coice calc-choice">
+                <div class="calc-choice__header go-js-choice-header">
+                  <span class="calc-choice__name">Выберите город доставки</span>
+                  <svg class="icon">
+                    <use xlink:href="svg-sprite/svg-sprite.svg#arrow-drop"></use>
+                  </svg>
                 </div>
+                <ul class="calc-choice__list">
+                  <li class="calc-choice__item go-js-choice-item">
+                    <label class="calc-choice__label choice-element">
+                      <span class="choice-element__name">Москва (Московская область#1)</span>
+                      <input class="choice-element__input" name="city" value="1.1" type="radio" />
+                    </label>
+                  </li>
+                  <li class="calc-choice__item go-js-choice-item">
+                    <label class="calc-choice__label choice-element">
+                      <span class="choice-element__name">Москва (Московская область#2)</span>
+                      <input class="choice-element__input" name="city" value="1.2" type="radio" />
+                    </label>
+                  </li>
+                  <li class="calc-choice__item go-js-choice-item">
+                    <label class="calc-choice__label choice-element">
+                      <span class="choice-element__name">Москва (Московская область#3)</span>
+                      <input class="choice-element__input" name="city" value="1.3" type="radio" />
+                    </label>
+                  </li>
+                  <li class="calc-choice__item go-js-choice-item">
+                    <label class="calc-choice__label choice-element">
+                      <span class="choice-element__name">Москва (Московская область#4)</span>
+                      <input class="choice-element__input" name="city" value="1.4" type="radio" />
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <span class="calc__text">Тип Авто</span>
+              <div class="calc__truck choice-truck go-js-coice-track">
+                <ul class="choice-truck__list">
+                  <li class="choice-truck__item">
+                    <label class="calc-track__label choice-element go-js-coice-tab" data-tab="tab_1">
+                      <span class="choice-element__name">Фура</span>
+                      <input class="choice-element__input" name="truck" value="5000" type="radio" />
+                      <span class="choice-element__checkbox"></span>
+                    </label>
+                  </li>
+                  <li class="choice-truck__item">
+                    <label class="calc-track__label choice-element go-js-coice-tab" data-tab="tab_2">
+                      <span class="choice-element__name">Шаланда</span>
+                      <input class="choice-element__input" name="truck" value="6000" type="radio" />
+                      <span class="choice-element__checkbox"></span>
+                    </label>
+                  </li>
+                  <li class="choice-truck__item">
+                    <label class="calc-track__label choice-element go-js-coice-tab" data-tab="tab_3">
+                      <span class="choice-element__name">Длинномер</span>
+                      <input class="choice-element__input" name="truck" value="7000" type="radio" />
+                      <span class="choice-element__checkbox"></span>
+                    </label>
+                  </li>
+                  <li class="choice-truck__item">
+                    <label class="calc-track__label choice-element go-js-coice-tab" data-tab="tab_4">
+                      <span class="choice-element__name">Еврофура</span>
+                      <input class="choice-element__input" name="truck" value="8000" type="radio" />
+                      <span class="choice-element__checkbox"></span>
+                    </label>
+                  </li>
+                </ul>
+                <div class="choice-truck__content">
+                  <picture class="choice-truck__preview go-js-coice-content choice-truck__preview--active" id="tab_1">
+                    <img src="images/truck/Фура.svg" alt="фура">
+                  </picture>
+                  <picture class="choice-truck__preview go-js-coice-content" id="tab_2">
+                    <img src="images/truck/Шаланда.svg" alt="шаланда">
+                  </picture>
+                  <picture class="choice-truck__preview go-js-coice-content" id="tab_3">
+                    <img src="images/truck/Длинномер.svg" alt="длинномер">
+                  </picture>
+                  <picture class="choice-truck__preview go-js-coice-content" id="tab_4">
+                    <img src="images/truck/Еврофура.svg" alt="еврофура">
+                  </picture>
+                </div>
+              </div>
+              <div class="calc__input coice-waight">
+                <div class="choice-weight__field">
+                  <input type="text" class="choice-weight__input input" placeholder="Объем (м3)">
+                  <span class="calc__question-icon question-icon">?</span>
+                </div>
+                <div class="choice-weight__field">
+                  <input type="text" class="choice-weight__input input" placeholder="Вес">
+                  <span class="calc__question-icon question-icon">?</span>
+                </div>
+              </div>
             </div>
             <div class="calc__box calc__box--result">
                <span>

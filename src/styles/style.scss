@@ -3,7 +3,7 @@ body {
    background-color: #fff;
 }
 
-body.go-js-lock {
+body.lock {
    overflow: hidden;
 }
 
@@ -133,7 +133,7 @@ p {
 .input {
    display: flex;
    align-items: center;
-   padding: 23px 25px 21px 55px;
+   padding: 13px 25px 13px 25px;
    border: 1px solid #fff;
 
    font-family: 'ProximaNova';
@@ -171,6 +171,17 @@ p {
       }
    }
 
+   &--with-icon {
+      padding: 13px 25px 13px 55px;
+   }
+
+   @media screen and (min-width: 1366px) {
+      padding: 23px 25px 21px 25px;
+      &--with-icon {
+         padding: 23px 25px 21px 55px;
+      }
+   }
+
 }
 
 .drop-box {
@@ -184,5 +195,28 @@ p {
    }
    &__list {
       position: absolute;
+   }
+}
+
+.question-icon {
+   width: 23px;
+   height: 23px;
+   flex: 0 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: $secondary;
+   border-radius: 100%;
+   cursor: pointer;
+
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+   color: #fff;
+   &:hover {
+      background-color: $primary;
+   }
+   &:active {
+      background-color: $dark;
    }
 }
