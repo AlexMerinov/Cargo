@@ -1,0 +1,177 @@
+.main {
+   &__question {
+      margin-bottom: 60px;
+   }
+}
+.question {
+   &__box {
+      @media screen and (min-width: 1366px) {
+         position: relative;
+      }
+   }
+   &-list {
+      &__header {
+         display: flex;
+         align-items: center;  
+         padding: 20px;
+         background-color: $light;
+         border-bottom: 1px solid rgba(196, 196, 196, 0.55);
+         cursor: pointer;
+         transition: all 0.2s linear;
+         &:last-child {
+            border-bottom: none;
+         }
+         &:hover {
+            background-color: $dark;
+            border-bottom: 1px solid $light;
+            .question-list__counter {
+               color: $light;
+            }
+            .question-list__title {
+               color: $light;
+            }
+         }
+      }
+
+      &__wrapper {
+         padding: 20px;
+         display: flex;
+         flex-direction: column;
+         flex: 1 1 auto;
+         @media screen and (min-width: 768px) {
+            padding: 20px 25px;             
+         }
+         @media screen and (min-width: 1366px) {
+            padding: 40px;             
+         }
+      }
+
+      &__item {
+         &--active {
+            .question-list__content {
+               z-index: 10;
+               max-height: 100%;
+            }
+
+            .question-list__header {
+               background-color: $secondary;
+            }
+            .question-list__title {
+               color: $light;
+            }
+            .question-list__counter {
+               color: $light;
+            }
+         }
+      }
+
+      &__counter {
+         display: block;
+         font-weight: 600;
+         font-size: 24px;
+         line-height: 28px;
+         color: $dark;
+         margin-right: 14px;
+         transition: all 0.2s linear;
+         @media screen and (min-width: 1366px) {
+            font-size: 45px;
+            line-height: 53px;
+         }
+      }
+
+      &__title {
+         font-weight: 600;
+         font-size: 16px;
+         line-height: 19px;
+         color: $title;
+         transition: all 0.2s linear;
+         @media screen and (min-width: 1920px) {
+            font-size: 19px;
+            line-height: 22px;
+         }
+      }
+
+      &__links {
+         display: flex;
+         flex-direction: column;
+         @media screen and (min-width: 768px) {
+            flex-direction: row;
+            margin-top: auto;
+         }
+      }
+
+      &__link {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         padding: 14px 35px;
+
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 19px;
+         transition: all 0.2s linear;
+
+         &--light {
+            background-color: #fff;
+            border: 1px solid #fff;
+            color: $secondary;
+            margin-bottom: 10px;
+            &:hover {
+               background-color: $secondary;
+               color: #fff;
+            }
+            @media screen and (min-width: 768px) {
+               margin-bottom: 0;
+               margin-right: 10px;
+            }
+         }
+
+         &--dark {
+            background-color: $secondary;
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover {
+               background-color: #fff;
+               color: $secondary;
+            }
+         }
+
+         @media screen and (min-width: 1366px) {
+            padding: 23px 35px;   
+         }
+      }
+
+      &__content {
+         background-color: $secondary;
+         max-height: 0;
+         overflow: hidden;
+         transition: all 0.2s linear;
+         display: flex;
+         flex-direction: column;
+         @media screen and (min-width: 1366px) {
+            max-height: 100%; 
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 50%;          
+         }
+      }
+
+      &__text {
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 19px;
+         color: #fff;
+         margin-bottom: 30px;
+         p {
+            color: inherit;
+         }
+      }
+
+      @media screen and (min-width: 1366px) {
+         width: 50%;
+      }
+   }
+}

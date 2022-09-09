@@ -273,4 +273,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }
  
    })
+
+   // Question list
+
+   const questionBtns = document.querySelectorAll('.go-js-question-btn');
+   if (!questionBtns) return;
+
+   questionBtns.forEach((questionBtn) => {
+      questionBtn.addEventListener("click", tabsOpen)
+   })
+
+   function tabsOpen(e) {
+      let currentItem = e.target.closest('.question-list__item');
+      let listItem = e.target.closest('.question-list');
+      let currentList = e.target.nextElementSibling;
+      if (document.body.clientWidth < 1366) {
+         currentItem.classList.toggle('question-list__item--active');
+         if (currentItem.classList.contains('question-list__item--active')) {
+            currentList.style.maxHeight = currentList.scrollHeight + "px";
+         } else {
+            currentList.style.maxHeight = 0;
+         }
+      }
+      if (document.body.clientWidth > 1366) {
+         activeItems = listItem.querySelectorAll('.question-list__item--active');
+         activeItems.forEach((activeItem) => {
+            activeItem.classList.remove('question-list__item--active');
+         })
+         currentItem.classList.add('question-list__item--active');  
+      }
+   }
+
 });
